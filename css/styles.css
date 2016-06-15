@@ -18,6 +18,12 @@
 }
 @font-face {
     font-family: "Merriweather";
+    src: url("Merriweather-Italic.ttf") format("truetype");
+    font-style: italic;
+    font-weight: 400;
+}
+@font-face {
+    font-family: "Merriweather";
     src: url("Merriweather-Bold.ttf") format("truetype");
     font-style: normal;
     font-weight: 700;
@@ -35,6 +41,8 @@ body {
     font-family: "Merriweather", sans-serif;
     line-height: 1.618;
     background-color: #f4f4f4;
+    background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.05) 25%, transparent 25%, transparent 50%, rgba(0, 0, 0, 0.05) 50%, rgba(0, 0, 0, 0.05) 75%, transparent 75%, transparent);
+    background-size: 40px 40px;
 }
 h1,
 h2,
@@ -43,6 +51,15 @@ h4,
 h5,
 h6 {
     font-size: 1.33rem;
+}
+em {
+    font-style: italic;
+}
+/*
+ * Main
+ */
+main {
+    margin-top: 7.2rem;
 }
 /*
  * Grid
@@ -61,14 +78,11 @@ h6 {
  * Card
  */
 .card {
-    margin-top: 7.2rem;
+    margin-top: 1.6rem;
     padding: 2.4rem;
     border-radius: 1.2rem;
     box-shadow: 0 1px 4px rgba(0,0,0,0.35);
     letter-spacing: 0.05rem;
-}
-.card + .card {
-    margin-top: 1.6rem;
 }
 .card--greeting {
     color: white;
@@ -78,42 +92,15 @@ h6 {
     color: white;
     background-color: #ec8e1f;
 }
-/*
- * Nav
- */
-.nav {
-    display: block;
-    padding: 0.8rem;
-}
-.nav:after {
-    content: "";
-    display: block;
-    clear: both;
-}
-.nav-group {
-    display: block;
-    float: left;
-    margin-right: -0.8rem;
-    margin-left: -0.8rem;
-}
-.nav-group + .nav-group {
-    float: right;
-}
-.nav-item {
-    display: block;
-    float: left;
-    height: 2.4rem;
-    line-height: 2.4rem;
-    padding-right: 0.8rem;
-    padding-left: 0.8rem;
-}
-.nav-item + .nav-item {
-    margin-left: 0.8rem;
+.card + .btn-group {
+    margin-top: 1.6rem;
 }
 /*
  * Button
  */
 .btn {
+    display: inline-flex;
+    padding: 0.4rem 0.8rem;
     border: 1px solid rgba(0,0,0,0.25);
     border-radius: 0.4rem;
 }
@@ -124,6 +111,24 @@ h6 {
 .btn:active {
     background-color: rgba(0,0,0,0.15);
 }
+.btn--text {
+    border-color: transparent;
+}
+.btn--urgent {
+    color: white;
+    border-color: #d25b3c;
+    background-color: #d25b3c;
+}
+/*
+ * Button Group
+ */
+.btn-group {
+    display: flex;
+    justify-content: center;
+}
+.btn-group .btn:not(:last-child) {
+    margin-right: 0.8rem;
+}
 /*
  * Utilities
  */
@@ -132,4 +137,11 @@ h6 {
 }
 .fw9 {
     font-weight: 900 !important;
+}
+.text--urgent {
+    color: #d25b3c;
+}
+.px0 {
+    padding-left: 0;
+    padding-right: 0;
 }

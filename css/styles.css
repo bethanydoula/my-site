@@ -99,6 +99,8 @@ main {
  * Button
  */
 .btn {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
     display: inline-flex;
     padding: 0.4rem 0.8rem;
     border: 1px solid rgba(0,0,0,0.25);
@@ -123,7 +125,11 @@ main {
  * Button Group
  */
 .btn-group {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
 }
 .btn-group .btn:not(:last-child) {

@@ -111,15 +111,21 @@ main {
     background-color: rgba(0,0,0,0.1);
 }
 .btn:active {
-    background-color: rgba(0,0,0,0.15);
+    box-shadow: inset 0 2px 3px rgba(0,0,0,0.15);
 }
 .btn--text {
-    border-color: transparent;
+    border-color: transparent !important;
+    background-color: transparent !important;
 }
 .btn--urgent {
     color: white;
     border-color: #d25b3c;
     background-color: #d25b3c;
+}
+.btn--urgent:hover,
+.btn--urgent:focus {
+    border-color: #c85435;
+    background-color: #c85435;
 }
 /*
  * Button Group
